@@ -3,220 +3,199 @@
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<title>
-洛克王国宠物图鉴
-</title>
+    <title>洛克王国宠物图鉴</title>
 
 
-<style>
+    <style>
 
-*{
-    box-sizing:border-box;
-}
+        * {
+            box-sizing: border-box;
+        }
 
 
-body{
+        body {
 
-    margin:0;
+            margin: 0;
+            padding: 20px;
 
-    padding:20px;
+            background: #0f172a;
 
-    background:#0f172a;
+            color: white;
 
-    color:white;
+            font-family: "Microsoft YaHei", sans-serif;
 
-    font-family:
-    "Microsoft YaHei",
-    sans-serif;
+        }
 
-}
 
+        .header {
 
+            position: sticky;
 
-.header{
+            top: 0;
 
-    position:sticky;
+            z-index: 10;
 
-    top:0;
+            background: #1e293b;
 
-    z-index:10;
+            padding: 20px;
 
-    background:#1e293b;
+            border-radius: 16px;
 
-    padding:20px;
+            margin-bottom: 20px;
 
-    border-radius:16px;
+        }
 
-    margin-bottom:20px;
 
-}
+        .title {
 
+            font-size: 28px;
 
+            color: #facc15;
 
-.title{
+            margin-bottom: 15px;
 
-    font-size:28px;
+        }
 
-    color:#facc15;
 
-    margin-bottom:15px;
+        .controls {
 
-}
+            display: flex;
 
+            gap: 10px;
 
+            flex-wrap: wrap;
 
-.controls{
+        }
 
-    display:flex;
 
-    gap:10px;
+        input, select {
 
-    flex-wrap:wrap;
+            background: #0f172a;
 
-}
+            color: white;
 
+            border: 1px solid #475569;
 
+            padding: 10px 15px;
 
-input,select{
+            border-radius: 10px;
 
-    background:#0f172a;
+        }
 
-    color:white;
 
-    border:
+        .count {
 
-    1px solid #475569;
+            margin-left: auto;
 
-    padding:10px 15px;
+            color: #94a3b8;
 
-    border-radius:10px;
+        }
 
-    font-size:15px;
 
-}
+        .grid {
 
+            display: grid;
 
+            grid-template-columns:
+repeat(auto-fill, minmax(180px, 1fr));
 
-.count{
+            gap: 18px;
 
-    margin-left:auto;
+        }
 
-    color:#94a3b8;
 
-}
+        .card {
 
+            background: #1e293b;
 
+            border-radius: 18px;
 
-.grid{
+            padding: 15px;
 
-    display:grid;
+            text-align: center;
 
-    grid-template-columns:
-    repeat(auto-fill,minmax(180px,1fr));
+            border: 1px solid #334155;
 
-    gap:18px;
+            transition: .2s;
 
-}
+        }
 
 
+        .card:hover {
 
-.card{
+            transform: translateY(-5px);
 
-    background:#1e293b;
+            border-color: #38bdf8;
 
-    border-radius:18px;
+        }
 
-    padding:15px;
 
-    text-align:center;
+        .img {
 
-    border:1px solid #334155;
+            height: 140px;
 
-    transition:.2s;
+            display: flex;
 
-}
+            justify-content: center;
 
+            align-items: center;
 
+            background: #020617;
 
-.card:hover{
+            border-radius: 15px;
 
-    transform:translateY(-5px);
+        }
 
-    border-color:#38bdf8;
 
-}
+        .img img {
 
+            max-width: 95%;
 
+            max-height: 130px;
 
-.img{
+        }
 
-    height:140px;
 
-    display:flex;
+        .name {
 
-    justify-content:center;
+            margin-top: 10px;
 
-    align-items:center;
+            font-size: 17px;
 
-    background:#020617;
+            font-weight: bold;
 
-    border-radius:15px;
+        }
 
-}
 
+        .id {
 
+            color: #94a3b8;
 
-.img img{
+            font-size: 13px;
 
-    max-width:95%;
+        }
 
-    max-height:130px;
 
-}
+        .lock {
 
+            color: #f87171;
 
+            cursor: pointer;
 
-.name{
+        }
 
-    margin-top:10px;
 
-    font-size:17px;
+        .ok {
 
-    font-weight:bold;
+            color: #34d399;
 
-}
+        }
 
 
+    </style>
 
-.id{
-
-    color:#94a3b8;
-
-    font-size:13px;
-
-}
-
-
-
-.lock{
-
-    color:#f87171;
-
-}
-
-
-
-.ok{
-
-    color:#34d399;
-
-}
-
-
-
-</style>
 
 </head>
 
@@ -227,192 +206,198 @@ input,select{
 <div class="header">
 
 
-<div class="title">
-🐉 洛克王国宠物图鉴
-</div>
+    <div class="title">
+
+        🐉 洛克王国宠物图鉴
+
+    </div>
 
 
-
-<div class="controls">
-
-
-<input
-id="search"
-placeholder="搜索名称 / ID"
-oninput="filter()"
-/>
+    <div class="controls">
 
 
-
-<select id="status"
-onchange="filter()">
-
-<option value="all">
-全部状态
-</option>
+        <input
+                id="search"
+                placeholder="搜索名称 / ID"
+                oninput="filter()"
+        />
 
 
-<option value="ok">
-✅ 已点亮
-</option>
+        <select id="status"
+                onchange="filter()">
 
 
-<option value="lock">
-❌ 未点亮
-</option>
+            <option value="all">
+                全部状态
+            </option>
 
 
-</select>
+            <option value="ok">
+                ✅ 已点亮
+            </option>
 
 
-
-<select id="type"
-onchange="filter()">
-
-<option value="all">
-全部数据
-</option>
+            <option value="lock">
+                ❌ 未点亮
+            </option>
 
 
-</select>
+        </select>
 
 
-<div class="count" id="count">
-
-加载中...
-
-</div>
+        <select id="type"
+                onchange="filter()">
 
 
-</div>
+            <option value="all">
+                全部数据
+            </option>
 
 
-</div>
+        </select>
 
 
+        <div class="count" id="count">
 
-<div class="grid" id="grid">
+            加载中...
+
+        </div>
+
+
+    </div>
+
 
 </div>
 
 
+<div id="grid" class="grid">
 
+</div>
 
 <script>
 
-
-let pets=[];
-
-let show=[];
+let pets = [];
+let show = [];
 
 
-
-// json列表
-
-const files=[
-
-"宠物大全.json",
-
-"战斗宠物.json",
-
-"新宠物.json",
-
-"宠物皮肤.json"
-
+const files = [
+    "宠物大全.json",
+    "战斗宠物.json",
+    "新宠物.json",
+    "宠物皮肤.json"
 ];
-
-
 
 
 
 async function load(){
 
 
-
-for(let file of files){
-
-
-try{
+    pets=[];
 
 
-let r=await fetch(
-"../static/json/"+file
-);
+    for(let file of files){
+
+        try{
+
+            let r = await fetch(
+                "/static/json/"+file+"?t="+Date.now()
+            );
 
 
-
-if(r.ok){
-
-
-let data=await r.json();
+            if(!r.ok)
+                continue;
 
 
-console.log(
-file,
-data.length
-);
+            let data = await r.json();
 
 
 
-data.forEach(x=>{
+            data.forEach(x=>{
 
-x.type=file.replace(".json","");
+                x.type=file.replace(".json","");
 
-});
+            });
 
 
-pets.push(...data);
+            pets.push(...data);
 
+
+            console.log(file,data.length);
+
+
+        }catch(e){
+
+            console.log(e);
+
+        }
+
+
+    }
+
+
+
+    /*
+        根据id合并
+        false 优先
+    */
+
+
+    let map=new Map();
+
+
+
+    for(let p of pets){
+
+
+        let id=String(p.id);
+
+
+
+        if(!map.has(id)){
+
+            map.set(id,p);
+
+        }
+        else{
+
+
+            let old=map.get(id);
+
+
+            if(old.unknown===false ||
+               p.unknown===false){
+
+                old.unknown=false;
+
+            }
+
+
+        }
+
+
+    }
+
+
+
+    pets=[...map.values()];
+
+
+    console.log(
+        "最终:",
+        pets.length
+    );
+
+
+
+    show=pets;
+
+
+    initType();
+
+    render();
 
 
 }
-
-
-}catch(e){
-
-console.log(
-"跳过",
-file
-);
-
-
-}
-
-
-}
-
-
-
-
-
-// 去重
-
-let map=new Map();
-
-
-pets.forEach(p=>{
-
-map.set(p.id,p);
-
-});
-
-
-pets=[...map.values()];
-
-
-
-show=pets;
-
-
-
-initType();
-
-
-render();
-
-
-}
-
 
 
 
@@ -420,34 +405,35 @@ render();
 function initType(){
 
 
-let sel=document.getElementById("type");
+    let sel=document.getElementById("type");
 
 
-let types=[
-
-...new Set(
-pets.map(x=>x.type)
-)
-
-];
+    sel.innerHTML=
+    `<option value="all">全部数据</option>`;
 
 
-
-types.forEach(t=>{
-
-
-let o=document.createElement("option");
-
-
-o.value=t;
-
-o.innerText=t;
+    let types=[
+        ...new Set(
+            pets.map(x=>x.type)
+        )
+    ];
 
 
-sel.appendChild(o);
+
+    types.forEach(t=>{
 
 
-});
+        let o=document.createElement("option");
+
+        o.value=t;
+
+        o.innerText=t;
+
+
+        sel.appendChild(o);
+
+
+    });
 
 
 }
@@ -465,14 +451,16 @@ let box=document.getElementById("grid");
 
 document.getElementById("count")
 .innerText=
-`共 ${show.length} 只`;
+`共 ${show.length} 条`;
 
 
 
-box.innerHTML=show.map(p=>{
+
+box.innerHTML=
+show.map(p=>{
 
 
-let locked=p.unknown;
+let lock=p.unknown===true;
 
 
 
@@ -484,20 +472,14 @@ return `
 
 <div class="img">
 
-
-<img
-src="../static/img/${p.id}.png"
-onerror="this.style.display='none'"
->
-
+<img src="/static/img/${p.id}.png">
 
 </div>
 
 
-
 <div class="name">
 
-${p.name||"未知"}
+${p.name}
 
 </div>
 
@@ -510,13 +492,22 @@ ${p.name||"未知"}
 
 
 
-<div class="${locked?'lock':'ok'}">
+<div
+class="${lock?'lock':'ok'}"
+onclick="light(${p.id})"
+>
 
-${locked?
-"❌ 未点亮":
-"✅ 已点亮"}
+
+${lock
+?
+"❌ 未点亮(点击切换)"
+:
+"✅ 已点亮(点击切换)"
+}
+
 
 </div>
+
 
 
 </div>
@@ -537,25 +528,18 @@ ${locked?
 
 function filter(){
 
-
 let key=
-document
-.getElementById("search")
-.value
-.trim();
-
+document.getElementById("search")
+.value.trim();
 
 
 let status=
-document
-.getElementById("status")
+document.getElementById("status")
 .value;
 
 
-
 let type=
-document
-.getElementById("type")
+document.getElementById("type")
 .value;
 
 
@@ -564,37 +548,21 @@ show=pets.filter(p=>{
 
 
 let a=
-
 !key ||
-
-p.name?.includes(key)
-
-||
-
+p.name.includes(key) ||
 String(p.id).includes(key);
 
 
 
 let b=
-
-status=="all"
-
-||
-
-(status=="lock" && p.unknown)
-
-||
-
+status=="all" ||
+(status=="lock" && p.unknown) ||
 (status=="ok" && !p.unknown);
 
 
 
 let c=
-
-type=="all"
-
-||
-
+type=="all" ||
 p.type==type;
 
 
@@ -602,8 +570,8 @@ p.type==type;
 return a&&b&&c;
 
 
-});
 
+});
 
 
 render();
@@ -615,13 +583,86 @@ render();
 
 
 
-load();
 
+async function light(id){
+
+
+
+console.log(
+"点亮:",
+id
+);
+
+
+
+let r=await fetch(
+"/api/light",
+{
+
+method:"POST",
+
+headers:{
+"Content-Type":
+"application/json"
+},
+
+body:
+JSON.stringify({
+id:id
+})
+
+
+});
+
+
+
+let data=await r.json();
+
+
+
+console.log(data);
+
+
+
+if(data.success){
+
+    alert(
+        data.result[0].new
+        ?
+        "已取消点亮"
+        :
+        "已点亮"
+    );
+
+
+    await load();
+
+}
+
+
+else{
+
+
+alert(
+"失败:"+JSON.stringify(data)
+);
+
+
+}
+
+
+
+}
+
+
+
+load();
 
 
 </script>
 
 
 </body>
+
 
 </html>

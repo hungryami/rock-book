@@ -9,5 +9,6 @@ wheels/
 *.json
 *.png
 !roco_scene_pets_clean.json
+!assets/*
 # Virtual environments
 .venv

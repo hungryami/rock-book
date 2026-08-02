@@ -1,2 +1,3 @@
 #/static/img 下面存放 id.png
 #/static/json 存放网页爬出的数据 记得改名
+#roco_scene_pets_clean.json 这个是从洛克宝典扒下来的场景宠物,如果以后更新了,需要手动维护

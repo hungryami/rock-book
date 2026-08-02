@@ -219,7 +219,8 @@ def get_pet(id:int):
 
 
 if __name__ == "__main__":
-
+    #执行 find_catchable_missing
+    import find_catchable_missing
 
     uvicorn.run(
 

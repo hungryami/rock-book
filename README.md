@@ -1,12 +1,10 @@
-# 洛克王国宠物图鉴
+# 洛克王国查询图鉴
 
 ## 项目介绍
 
 本项目用于整理和展示《洛克王国》宠物图鉴数据。
 
-通过分析游戏客户端资源，获取宠物图鉴：
-
-
+通过分析游戏客户端资源获取宠物图鉴,可以快速抓取未点亮的场景宠物
 
 ## 使用步骤
 
@@ -29,7 +27,7 @@ https://17roco.qq.com/h5/
 #3.2 点击破茧大全 ...(同上).. 改名 战斗宠物.json
 #3.2 点击宠物大全 ..(同上)..  改名 宠物大全.json
 
-#4、改完名存放到static/json/下面的目录,替换我的文件
+#4、改完名存放到static/json/下面的目录,替换我的json文件
 
 json 数据格式如下
   {
@@ -96,6 +94,7 @@ json 数据格式如下
 ├── static
 │   ├── img          # rock图片
 │   └── json         # 浏览器爬出下来的json数据
+|   |-- roco_scene_pets_clean.json  #当前洛克王国版本全场景宠物,数据来源于洛克宝典
 | find_catchable_missing.py
   1、会根据/static/json/*json 与 roco_scene_pets_clean.json 比对
   2、根据比对结果生成还未抓到场景宠物，有目标文件的josn版本和xlsx版本
@@ -103,8 +102,6 @@ json 数据格式如下
     会启动fastapi 想在网页手动改的可以打开网页,find_catchable_missing 输出的也挺直观的
   
 ```
-
-
 
 ## 温馨提示
 

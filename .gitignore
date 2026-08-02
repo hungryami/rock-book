@@ -5,7 +5,18 @@ build/
 dist/
 wheels/
 *.egg-info
-static/img/*
-!static/img/.gitkeep
+
 # Virtual environments
 .venv
+
+
+# 1. 忽略 static 目录下的所有文件和子目录
+/static/*
+
+# 2. 例外：放行 img 和 json 文件夹本身
+!/static/img/
+!/static/json/
+
+# 3. 允许这两个文件夹内部的内容被 Git 跟踪（如果需要追踪其下的文件）
+!/static/img/*
+!/static/json/*

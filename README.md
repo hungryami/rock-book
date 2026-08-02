@@ -33,26 +33,25 @@ https://17roco.qq.com/h5/
 
 json 数据格式如下
   {
-    "page": 1,   #页面 1
-    "id": 1,     #宠物id
-    "name": "喵喵",#名称 喵喵
-    "unknown": false, #unknown = false 从图鉴已经点亮
-    "isNew": false, #没用 ，废案
+    "page": 1,         #页面 1
+    "id": 1,           #宠物id
+    "name": "喵喵",     # 名称 喵喵
+    "unknown": false,  #unknown = false 从图鉴已经点亮
+    "isNew": false,    # 没用 ，废案
     "isStarred": false #没用 ，废案
   },
 
-#5、执行/src/down_load_img.py 下载图片
-#其实也可以不下载图片,有了上面的4个json文件,直接执行find_catchable_missing.py,后面不使用网页端
+#5、执行/src/down_load_img.py 从官网cdn下载图片
+#其实也可以不下载图片,有了上面的4个json文件,直接执行find_catchable_missing.py
+#如果不想使用网页端可以跳过5,同事后面不要执行main,只执行find_catchable_missing
 
 #6、uv sync
 
+
 #7、执行main
-    uv run main.py
+ uv run main.py
  查看地址:
- http://localhost:8000/rock_book/
-
-#会生成
-
+ http://localhost:8000 
 ```
 
 
@@ -92,7 +91,8 @@ json 数据格式如下
 ├── README.md        # 说明文件
 ├── rock_book       
 │   └── index.html   # 展示文件
-│
+│   src
+|       [down_load_img.py] # 从官网cdn下载图片,如果不想使用网页端可以跳过
 ├── static
 │   ├── img          # rock图片
 │   └── json         # 浏览器爬出下来的json数据
@@ -114,7 +114,7 @@ json 数据格式如下
 
 **find_catchable_missing 生成的数据如下**
 
-``
+
 
 ![image-20260802170200074](./assets/image-20260802170200074.png)
 

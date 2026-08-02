@@ -6,5 +6,6 @@ dist/
 wheels/
 *.egg-info
 static/img/*
+!static/img/.gitkeep
 # Virtual environments
 .venv

@@ -112,9 +112,7 @@ json 数据格式如下
 **find_catchable_missing 生成的数据如下**
 
 
-
+本人还剩几个星座宝宝没有抓到
 ![image-20260802170200074](./assets/image-20260802170200074.png)
-
-
 
 ![image-20260802170238471](./assets/image-20260802170238471.png)

@@ -8,11 +8,3 @@ wheels/
 
 # Virtual environments
 .venv
-
-
-# 忽略 static 下所有内容
-/static/*
-
-# 仅保留这两个文件夹本身
-!/static/img/
-!/static/json/

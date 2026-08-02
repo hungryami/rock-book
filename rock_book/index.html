@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>
+洛克王国宠物图鉴
+</title>
+
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+
+body{
+
+    margin:0;
+
+    padding:20px;
+
+    background:#0f172a;
+
+    color:white;
+
+    font-family:
+    "Microsoft YaHei",
+    sans-serif;
+
+}
+
+
+
+.header{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:10;
+
+    background:#1e293b;
+
+    padding:20px;
+
+    border-radius:16px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.title{
+
+    font-size:28px;
+
+    color:#facc15;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.controls{
+
+    display:flex;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+input,select{
+
+    background:#0f172a;
+
+    color:white;
+
+    border:
+
+    1px solid #475569;
+
+    padding:10px 15px;
+
+    border-radius:10px;
+
+    font-size:15px;
+
+}
+
+
+
+.count{
+
+    margin-left:auto;
+
+    color:#94a3b8;
+
+}
+
+
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fill,minmax(180px,1fr));
+
+    gap:18px;
+
+}
+
+
+
+.card{
+
+    background:#1e293b;
+
+    border-radius:18px;
+
+    padding:15px;
+
+    text-align:center;
+
+    border:1px solid #334155;
+
+    transition:.2s;
+
+}
+
+
+
+.card:hover{
+
+    transform:translateY(-5px);
+
+    border-color:#38bdf8;
+
+}
+
+
+
+.img{
+
+    height:140px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#020617;
+
+    border-radius:15px;
+
+}
+
+
+
+.img img{
+
+    max-width:95%;
+
+    max-height:130px;
+
+}
+
+
+
+.name{
+
+    margin-top:10px;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+}
+
+
+
+.id{
+
+    color:#94a3b8;
+
+    font-size:13px;
+
+}
+
+
+
+.lock{
+
+    color:#f87171;
+
+}
+
+
+
+.ok{
+
+    color:#34d399;
+
+}
+
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="header">
+
+
+<div class="title">
+🐉 洛克王国宠物图鉴
+</div>
+
+
+
+<div class="controls">
+
+
+<input
+id="search"
+placeholder="搜索名称 / ID"
+oninput="filter()"
+/>
+
+
+
+<select id="status"
+onchange="filter()">
+
+<option value="all">
+全部状态
+</option>
+
+
+<option value="ok">
+✅ 已点亮
+</option>
+
+
+<option value="lock">
+❌ 未点亮
+</option>
+
+
+</select>
+
+
+
+<select id="type"
+onchange="filter()">
+
+<option value="all">
+全部数据
+</option>
+
+
+</select>
+
+
+<div class="count" id="count">
+
+加载中...
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+<div class="grid" id="grid">
+
+</div>
+
+
+
+
+<script>
+
+
+let pets=[];
+
+let show=[];
+
+
+
+// json列表
+
+const files=[
+
+"宠物大全.json",
+
+"战斗宠物.json",
+
+"新宠物.json",
+
+"宠物皮肤.json"
+
+];
+
+
+
+
+
+async function load(){
+
+
+
+for(let file of files){
+
+
+try{
+
+
+let r=await fetch(
+"../static/json/"+file
+);
+
+
+
+if(r.ok){
+
+
+let data=await r.json();
+
+
+console.log(
+file,
+data.length
+);
+
+
+
+data.forEach(x=>{
+
+x.type=file.replace(".json","");
+
+});
+
+
+pets.push(...data);
+
+
+
+}
+
+
+}catch(e){
+
+console.log(
+"跳过",
+file
+);
+
+
+}
+
+
+}
+
+
+
+
+
+// 去重
+
+let map=new Map();
+
+
+pets.forEach(p=>{
+
+map.set(p.id,p);
+
+});
+
+
+pets=[...map.values()];
+
+
+
+show=pets;
+
+
+
+initType();
+
+
+render();
+
+
+}
+
+
+
+
+
+function initType(){
+
+
+let sel=document.getElementById("type");
+
+
+let types=[
+
+...new Set(
+pets.map(x=>x.type)
+)
+
+];
+
+
+
+types.forEach(t=>{
+
+
+let o=document.createElement("option");
+
+
+o.value=t;
+
+o.innerText=t;
+
+
+sel.appendChild(o);
+
+
+});
+
+
+}
+
+
+
+
+
+function render(){
+
+
+let box=document.getElementById("grid");
+
+
+
+document.getElementById("count")
+.innerText=
+`共 ${show.length} 只`;
+
+
+
+box.innerHTML=show.map(p=>{
+
+
+let locked=p.unknown;
+
+
+
+return `
+
+
+<div class="card">
+
+
+<div class="img">
+
+
+<img
+src="../static/img/${p.id}.png"
+onerror="this.style.display='none'"
+>
+
+
+</div>
+
+
+
+<div class="name">
+
+${p.name||"未知"}
+
+</div>
+
+
+<div class="id">
+
+#${p.id}
+
+</div>
+
+
+
+<div class="${locked?'lock':'ok'}">
+
+${locked?
+"❌ 未点亮":
+"✅ 已点亮"}
+
+</div>
+
+
+</div>
+
+
+`;
+
+
+}).join("");
+
+
+
+}
+
+
+
+
+
+function filter(){
+
+
+let key=
+document
+.getElementById("search")
+.value
+.trim();
+
+
+
+let status=
+document
+.getElementById("status")
+.value;
+
+
+
+let type=
+document
+.getElementById("type")
+.value;
+
+
+
+show=pets.filter(p=>{
+
+
+let a=
+
+!key ||
+
+p.name?.includes(key)
+
+||
+
+String(p.id).includes(key);
+
+
+
+let b=
+
+status=="all"
+
+||
+
+(status=="lock" && p.unknown)
+
+||
+
+(status=="ok" && !p.unknown);
+
+
+
+let c=
+
+type=="all"
+
+||
+
+p.type==type;
+
+
+
+return a&&b&&c;
+
+
+});
+
+
+
+render();
+
+
+}
+
+
+
+
+
+load();
+
+
+
+</script>
+
+
+</body>
+
+</html>

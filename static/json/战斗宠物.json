@@ -1,0 +1,442 @@
+[
+  {
+    "page": 1,
+    "id": 3407,
+    "name": "厄影潘多拉",
+    "unknown": true,
+    "isNew": false,
+    "isStarred": false
+  },
+  {
+    "page": 1,
+    "id": 3316,
+    "name": "乾坤武圣",
+    "unknown": true,
+    "isNew": false,
+    "isStarred": false
+  },
+  {
+    "page": 1,
+    "id": 3249,
+    "name": "轰鼓元帅",
+    "unknown": true,
+    "isNew": false,
+    "isStarred": false
+  },
+  {
+    "page": 1,
+    "id": 3225,
+    "name": "炜煌雷诺",
+    "unknown": true,
+    "isNew": false,
+    "isStarred": false
+  },
+  {
+    "page": 1,
+    "id": 3193,
+    "name": "蓝波法芙",
+    "unknown": true,
+    "isNew": false,
+    "isStarred": false
+  },
+  {
+    "page": 1,
+    "id": 3167,
+    "name": "激斗奎因",
+    "unknown": true,
+    "isNew": false,
+    "isStarred": false
+  },
+  {
+    "page": 1,
+    "id": 3147,
+    "name": "冥铠战士",
+    "unknown": true,
+    "isNew": false,
+    "isStarred": false
+  },
+  {
+    "page": 1,
+    "id": 3142,
+    "name": "滟媚迪娜",
+    "unknown": true,
+    "isNew": false,
+    "isStarred": false
+  },
+  {
+    "page": 1,
+    "id": 3124,
+    "name": "御械女帝",
+    "unknown": false,
+    "isNew": false,
+    "isStarred": false
+  },
+  {
+    "page": 2,
+    "id": 3119,
+    "name": "兽神塔尔",
+    "unknown": true,
+    "isNew": false,
+    "isStarred": false
+  },
+  {
+    "page": 2,
+    "id": 3106,
+    "name": "鹿角豪侠",
+    "unknown": true,
+    "isNew": false,
+    "isStarred": false
+  },
+  {
+    "page": 2,
+    "id": 3019,
+    "name": "戮影龙皇",
+    "unknown": false,
+    "isNew": false,
+    "isStarred": false
+  },
+  {
+    "page": 2,
+    "id": 3039,
+    "name": "圣裁战龙王",
+    "unknown": true,
+    "isNew": false,
+    "isStarred": false
+  },
+  {
+    "page": 2,
+    "id": 3043,
+    "name": "天威狮鹫",
+    "unknown": true,
+    "isNew": false,
+    "isStarred": false
+  },
+  {
+    "page": 2,
+    "id": 3012,
+    "name": "怒影灾炎",
+    "unknown": true,
+    "isNew": false,
+    "isStarred": false
+  },
+  {
+    "page": 2,
+    "id": 2980,
+    "name": "寂夜魔王",
+    "unknown": false,
+    "isNew": false,
+    "isStarred": false
+  },
+  {
+    "page": 2,
+    "id": 2941,
+    "name": "恶魔伯爵",
+    "unknown": true,
+    "isNew": false,
+    "isStarred": false
+  },
+  {
+    "page": 2,
+    "id": 2889,
+    "name": "凌羽圣翼王",
+    "unknown": true,
+    "isNew": false,
+    "isStarred": false
+  },
+  {
+    "page": 3,
+    "id": 2806,
+    "name": "破启幽王",
+    "unknown": true,
+    "isNew": false,
+    "isStarred": false
+  },
+  {
+    "page": 3,
+    "id": 2764,
+    "name": "戾冰邪神",
+    "unknown": true,
+    "isNew": false,
+    "isStarred": false
+  },
+  {
+    "page": 3,
+    "id": 2793,
+    "name": "圣翼狮王",
+    "unknown": true,
+    "isNew": false,
+    "isStarred": false
+  },
+  {
+    "page": 3,
+    "id": 2791,
+    "name": "神煜修罗王",
+    "unknown": true,
+    "isNew": false,
+    "isStarred": false
+  },
+  {
+    "page": 3,
+    "id": 2756,
+    "name": "英魂雷瓦汀",
+    "unknown": true,
+    "isNew": false,
+    "isStarred": false
+  },
+  {
+    "page": 3,
+    "id": 2758,
+    "name": "涅冰凤凰",
+    "unknown": true,
+    "isNew": false,
+    "isStarred": false
+  },
+  {
+    "page": 3,
+    "id": 2755,
+    "name": "炽阳龙尊",
+    "unknown": true,
+    "isNew": false,
+    "isStarred": false
+  },
+  {
+    "page": 3,
+    "id": 2749,
+    "name": "苍雷妙尔尼",
+    "unknown": true,
+    "isNew": false,
+    "isStarred": false
+  },
+  {
+    "page": 3,
+    "id": 2750,
+    "name": "噬魂蛛后",
+    "unknown": true,
+    "isNew": false,
+    "isStarred": false
+  },
+  {
+    "page": 4,
+    "id": 2738,
+    "name": "圣迹冈尼尔",
+    "unknown": true,
+    "isNew": false,
+    "isStarred": false
+  },
+  {
+    "page": 4,
+    "id": 2732,
+    "name": "疯狂吉他",
+    "unknown": true,
+    "isNew": false,
+    "isStarred": false
+  },
+  {
+    "page": 4,
+    "id": 2696,
+    "name": "汐纱水王",
+    "unknown": false,
+    "isNew": false,
+    "isStarred": false
+  },
+  {
+    "page": 4,
+    "id": 2711,
+    "name": "薛定量子猫",
+    "unknown": true,
+    "isNew": false,
+    "isStarred": false
+  },
+  {
+    "page": 4,
+    "id": 2712,
+    "name": "极丶冰域之心",
+    "unknown": true,
+    "isNew": false,
+    "isStarred": false
+  },
+  {
+    "page": 4,
+    "id": 2710,
+    "name": "缄默蓝莲",
+    "unknown": true,
+    "isNew": false,
+    "isStarred": false
+  },
+  {
+    "page": 4,
+    "id": 2684,
+    "name": "禁魂终结者",
+    "unknown": true,
+    "isNew": false,
+    "isStarred": false
+  },
+  {
+    "page": 4,
+    "id": 2692,
+    "name": "冰晶风暴虎",
+    "unknown": true,
+    "isNew": false,
+    "isStarred": false
+  },
+  {
+    "page": 4,
+    "id": 2658,
+    "name": "钻头大亨",
+    "unknown": true,
+    "isNew": false,
+    "isStarred": false
+  },
+  {
+    "page": 5,
+    "id": 2675,
+    "name": "揽月圣女",
+    "unknown": true,
+    "isNew": false,
+    "isStarred": false
+  },
+  {
+    "page": 5,
+    "id": 2655,
+    "name": "斗战胜佛",
+    "unknown": true,
+    "isNew": false,
+    "isStarred": false
+  },
+  {
+    "page": 5,
+    "id": 2633,
+    "name": "幽蝠公爵",
+    "unknown": true,
+    "isNew": false,
+    "isStarred": false
+  },
+  {
+    "page": 5,
+    "id": 2625,
+    "name": "幽冥紫狐",
+    "unknown": true,
+    "isNew": false,
+    "isStarred": false
+  },
+  {
+    "page": 5,
+    "id": 2549,
+    "name": "天极圣雷王",
+    "unknown": false,
+    "isNew": false,
+    "isStarred": false
+  },
+  {
+    "page": 5,
+    "id": 2588,
+    "name": "极丶魔尾战猫",
+    "unknown": false,
+    "isNew": false,
+    "isStarred": false
+  },
+  {
+    "page": 5,
+    "id": 2553,
+    "name": "炽红莲兽",
+    "unknown": true,
+    "isNew": false,
+    "isStarred": false
+  },
+  {
+    "page": 5,
+    "id": 2552,
+    "name": "碧水灵兽",
+    "unknown": false,
+    "isNew": false,
+    "isStarred": false
+  },
+  {
+    "page": 5,
+    "id": 2550,
+    "name": "匿林螳螂",
+    "unknown": true,
+    "isNew": false,
+    "isStarred": false
+  },
+  {
+    "page": 6,
+    "id": 2541,
+    "name": "疾电酷拉",
+    "unknown": true,
+    "isNew": false,
+    "isStarred": false
+  },
+  {
+    "page": 6,
+    "id": 2446,
+    "name": "深渊制裁者",
+    "unknown": true,
+    "isNew": false,
+    "isStarred": false
+  },
+  {
+    "page": 6,
+    "id": 2429,
+    "name": "安琪",
+    "unknown": false,
+    "isNew": false,
+    "isStarred": false
+  },
+  {
+    "page": 6,
+    "id": 2428,
+    "name": "洛基",
+    "unknown": true,
+    "isNew": false,
+    "isStarred": false
+  },
+  {
+    "page": 6,
+    "id": 2399,
+    "name": "神圣大天使",
+    "unknown": true,
+    "isNew": false,
+    "isStarred": false
+  },
+  {
+    "page": 6,
+    "id": 2396,
+    "name": "圣萌王者",
+    "unknown": false,
+    "isNew": false,
+    "isStarred": false
+  },
+  {
+    "page": 6,
+    "id": 2386,
+    "name": "极丶永夜战龙",
+    "unknown": true,
+    "isNew": false,
+    "isStarred": false
+  },
+  {
+    "page": 6,
+    "id": 2383,
+    "name": "傲凌冰龙王",
+    "unknown": true,
+    "isNew": false,
+    "isStarred": false
+  },
+  {
+    "page": 6,
+    "id": 2375,
+    "name": "极丶岩铠领主",
+    "unknown": true,
+    "isNew": false,
+    "isStarred": false
+  },
+  {
+    "page": 7,
+    "id": 2374,
+    "name": "极丶先锋君主",
+    "unknown": true,
+    "isNew": false,
+    "isStarred": false
+  }
+]
